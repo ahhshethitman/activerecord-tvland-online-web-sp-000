@@ -8,7 +8,7 @@ class Show < ActiveRecord::Base
   def actors_list
     self.actor.collect do |t|
      t.name
-    end.join
+    end
   end
 
 end
