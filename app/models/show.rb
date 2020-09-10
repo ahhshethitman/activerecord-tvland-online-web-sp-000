@@ -6,8 +6,8 @@ class Show < ActiveRecord::Base
   has_many :actors , through: :characters
   
   def actors_list
-    self.actor.collect do |actor|
-     
+    self.actor.collect do |t|
+     t.name
     end.join
   end
 
