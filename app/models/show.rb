@@ -6,6 +6,10 @@ class Show < ActiveRecord::Base
   has_many :actors, through: :actor
   
   def actors_list 
+    self.actors do |actors|
+     "#{actors}"
+    end.join
+  end
     
   end
     
